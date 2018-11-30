@@ -7,7 +7,7 @@ All the packages needed to compile samba4
 
 ## Part 2 (Disable Selinux)
 To permanently disable SELinux on your CentOS 7 system:
-- Open the /etc/selinux/config file and set the SELINUX mod to disabled.
+- Open the `/etc/selinux/config` file and set the SELINUX mod to disabled.
 ```
     # This file controls the state of SELinux on the system.
     # SELINUX= can take one of these three values:

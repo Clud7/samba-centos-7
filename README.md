@@ -21,3 +21,8 @@ To permanently disable SELinux on your CentOS 7 system:
     SELINUXTYPE=targeted`
 ```
 - Restart your CentOS 7 system `shutdown -r now`
+
+
+## Part 3 (Download and Build)
+- To download samba use the command `wget https://download.samba.org/pub/samba/stable/samba-4.9.3.tar.gz`
+- To unzip samba use the command `tar -zxvf samba-4.9.3.tar.gz`

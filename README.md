@@ -20,3 +20,4 @@ To permanently disable SELinux on your CentOS 7 system:
     #       mls - Multi Level Security protection.
     SELINUXTYPE=targeted`
 ```
+- Restart your CentOS 7 system `shutdown -r now`

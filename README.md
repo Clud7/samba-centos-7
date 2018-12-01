@@ -34,3 +34,27 @@ yum install gpgme-devel jansson-devel lmdb-devel gcc avahi-devel cups-devel dbus
 ```
 ./configure --prefix=/usr --localstatedir=/var --with-configdir=/etc/samba --libdir=/usr/lib64 --with-modulesdir=/usr/lib64/samba --with-pammodulesdir=/lib64/security --with-lockdir=/var/lib/samba --with-logfilebase=/var/log/samba --with-piddir=/run/samba --with-privatedir=/etc/samba --enable-cups --with-acl-support --with-ads --with-automount --enable-fhs --with-pam --with-quotas --with-shared-modules=idmap_rid,idmap_ad,idmap_hash,idmap_adex --with-syslog --with-utmp --with-dnsupdate
 ```
+
+
+## Part 5 (Create Systemd File)
+- Run the command `vi /usr/lib/systemd/system/samba.service` and add:
+```
+[Unit]
+Description=Samba AD Daemon
+Wants=network-online.target
+After=network.target network-online.target rsyslog.service
+
+[Service]
+Type=forking
+PIDFile=/run/samba/samba.pid
+LimitNOFILE=16384
+ExecStart=/usr/sbin/samba --daemon
+ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
+```
+- Run the command `vi /etc/tmpfiles.d/samba.conf` and add:
+```
+d /var/run/samba 0755 root root -
+```

@@ -36,7 +36,7 @@ yum install gpgme-devel jansson-devel lmdb-devel gcc avahi-devel cups-devel dbus
 ```
 
 
-## Part 5 (Create Systemd File)
+## Part 5 (Create Systemd File, Samba TMP conf and rename krb5.conf)
 - Run the command `vi /usr/lib/systemd/system/samba.service` and add:
 ```
 [Unit]
@@ -58,3 +58,7 @@ WantedBy=multi-user.target
 ```
 d /var/run/samba 0755 root root -
 ```
+- Run the command `mv /etc/krb5.conf /etc/krb5.conf.old`
+
+## Part 6 Setun Samba Domain Provision
+- Run the command `samba-tool domain provision`

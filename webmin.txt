@@ -1,0 +1,16 @@
+install webmin step by step:
+
+1) <b>create the /etc/yum.repos.d/webmin.repo file containing :</b>
+
+[Webmin]
+name=Webmin Distribution Neutral
+#baseurl=https://download.webmin.com/download/yum
+mirrorlist=https://download.webmin.com/download/yum/mirrorlist
+enabled=1
+
+2) <b>Fetch and install my GPG key with which the packages are signed:</b>
+wget http://www.webmin.com/jcameron-key.asc
+rpm --import jcameron-key.asc
+
+3)<b>install with:</b>
+yum install webmin

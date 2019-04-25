@@ -26,9 +26,27 @@ To permanently disable SELinux on your CentOS 7 system:
     # systemctl disable firewalld
 ```
 
-## Part 3 
+## Part 3 (install webmin)
+- Create the `/etc/yum.repos.d/webmin.repo` file containing 
+```
+[Webmin]
+name=Webmin Distribution Neutral
+#baseurl=https://download.webmin.com/download/yum
+mirrorlist=https://download.webmin.com/download/yum/mirrorlist
+enabled=1
+```
+- You should also fetch and install my GPG key with which the packages are signed, with the commands:
+```
+wget http://www.webmin.com/jcameron-key.asc
+rpm --import jcameron-key.asc
+```
+- Install with command `yum install webmin`
+
 
 - Restart your CentOS 7 system `shutdown -r now`
+
+## Part 4 (Install Bind DNS)
+
 
 ## Part 5 (Install All the required packages)
 ```

@@ -27,6 +27,7 @@ To permanently disable SELinux on your CentOS 7 system:
 ```
 
 ## Part 3 (install webmin)
+(info --> http://www.webmin.com/rpm.html )
 - Create the `/etc/yum.repos.d/webmin.repo` file containing 
 ```
 [Webmin]

@@ -5,7 +5,7 @@ All the packages needed to compile samba4
 - Update your system to the latest version. With root user use the command `yum update`.
 - Install the EPEL Release Repo. With root user use the command `yum install epel-release -y`.
 
-## Part 2 (Disable Selinux) & Firewalld
+## Part 2 (Disable Selinux & Firewalld)
 To permanently disable SELinux on your CentOS 7 system:
 - Open the `/etc/selinux/config` file and set the SELINUX mod to disabled.
 ```
@@ -26,15 +26,16 @@ To permanently disable SELinux on your CentOS 7 system:
     # systemctl disable firewalld
 ```
 
+## Part 3 
 
 - Restart your CentOS 7 system `shutdown -r now`
 
-## Part 3 (Install All the required packages
+## Part 5 (Install All the required packages)
 ```
 yum install gpgme-devel jansson-devel lmdb-devel gcc avahi-devel cups-devel dbus-devel docbook-style-xsl e2fsprogs-devel gawk gnupg2 gpgme-devel jansson-devel krb5-devel libacl-devel libaio-devel libarchive-devel libattr-devel libcap-devel libcmocka-devel libtirpc-devel libuuid-devel libxslt ncurses-devel openldap-devel pam-devel perl-generators perl popt-devel quota-devel readline-devel sed xfsprogs-devel xz zlib-devel pkgconfig libblkid-devel gnutls-devel python-devel gdb krb5-workstation setroubleshoot-server setroubleshoot-plugins policycoreutils-python libsemanage-python setools-libs libpcap-devel sqlite-devel libidn-devel libsepol-devel libxml2-devel keyutils-libs-devel cyrus-sasl-devel bind-utils bzip2 vim wget -y
 ```
 
-## Part 4 (Download and Build)
+## Part 6 (Download and Build)
 - To download samba use the command `wget https://download.samba.org/pub/samba/stable/samba-4.9.3.tar.gz`
 - To unzip samba use the command `tar -zxvf samba-4.9.3.tar.gz`
 - Configure Samba with 
@@ -43,7 +44,7 @@ yum install gpgme-devel jansson-devel lmdb-devel gcc avahi-devel cups-devel dbus
 ```
 
 
-## Part 5 (Create Systemd File, Samba TMP conf and rename krb5.conf)
+## Part 7 (Create Systemd File, Samba TMP conf and rename krb5.conf)
 - Run the command `vi /usr/lib/systemd/system/samba.service` and add:
 ```
 [Unit]
@@ -67,5 +68,5 @@ d /var/run/samba 0755 root root -
 ```
 - Run the command `mv /etc/krb5.conf /etc/krb5.conf.old`
 
-## Part 6 Setun Samba Domain Provision
+## Part 8 Setun Samba Domain Provision
 - Run the command `samba-tool domain provision`

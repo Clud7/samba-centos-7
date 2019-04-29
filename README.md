@@ -85,7 +85,10 @@ After the successfule configuration run the make install command as root
 ```
 make && make install
 ```
-
+Configue Samba:
+```
+/usr/local/samba/bin/samba-tool domain provision --realm=mydomain.lan --domain=mydomain --adminpass="your_password" --server-role=dc --dns-backend=SAMBA_INTERNAL
+```
 
 ```
 ./configure --prefix=/usr --localstatedir=/var --with-configdir=/etc/samba --libdir=/usr/lib64 --with-modulesdir=/usr/lib64/samba --with-pammodulesdir=/lib64/security --with-lockdir=/var/lib/samba --with-logfilebase=/var/log/samba --with-piddir=/run/samba --with-privatedir=/etc/samba --enable-cups --with-acl-support --with-ads --with-automount --enable-fhs --with-pam --with-quotas --with-shared-modules=idmap_rid,idmap_ad,idmap_hash,idmap_adex --with-syslog --with-utmp --with-dnsupdate

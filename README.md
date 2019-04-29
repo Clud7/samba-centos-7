@@ -6,6 +6,7 @@ All the packages needed to compile samba4
 - Install the EPEL Release Repo. With root user use the command `yum install epel-release -y`.
 
 ## Part 2 (Disable Selinux & Firewalld)
+Check Selinux with `sestatus`
 To permanently disable SELinux on your CentOS 7 system:
 - Open the `/etc/selinux/config` file and set the SELINUX mod to disabled.
 ```

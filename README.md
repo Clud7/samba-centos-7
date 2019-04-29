@@ -50,6 +50,22 @@ rpm --import jcameron-key.asc
 
 
 ## Part 5 (Install All the required packages)
+
+```
+ yum install attr bind-utils docbook-style-xsl gcc gdb krb5-workstation \
+       libsemanage-python libxslt perl perl-ExtUtils-MakeMaker \
+       perl-Parse-Yapp perl-Test-Base pkgconfig policycoreutils-python \
+       python2-crypto gnutls-devel libattr-devel keyutils-libs-devel \
+       libacl-devel libaio-devel libblkid-devel libxml2-devel openldap-devel \
+       pam-devel popt-devel python-devel readline-devel zlib-devel systemd-devel \
+       lmdb-devel jansson-devel gpgme-devel pygpgme libarchive-devel
+```
+
+Also python3.6 -->
+`sudo yum install centos-release-scl` and `yum install rh-python36` and `scl enable rh-python36 bash`
+
+
+
 ```
 yum install gpgme-devel jansson-devel lmdb-devel gcc avahi-devel cups-devel dbus-devel docbook-style-xsl e2fsprogs-devel gawk gnupg2 gpgme-devel jansson-devel krb5-devel libacl-devel libaio-devel libarchive-devel libattr-devel libcap-devel libcmocka-devel libtirpc-devel libuuid-devel libxslt ncurses-devel openldap-devel pam-devel perl-generators perl popt-devel quota-devel readline-devel sed xfsprogs-devel xz zlib-devel pkgconfig libblkid-devel gnutls-devel python-devel gdb krb5-workstation setroubleshoot-server setroubleshoot-plugins policycoreutils-python libsemanage-python setools-libs libpcap-devel sqlite-devel libidn-devel libsepol-devel libxml2-devel keyutils-libs-devel cyrus-sasl-devel bind-utils bzip2 vim wget -y
 ```

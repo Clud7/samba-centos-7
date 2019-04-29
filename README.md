@@ -64,13 +64,7 @@ rpm --import jcameron-key.asc
        pam-devel popt-devel python-devel readline-devel zlib-devel systemd-devel \
        lmdb-devel jansson-devel gpgme-devel pygpgme libarchive-devel
 ```
-
-Also python3.6 -->
-`sudo yum install centos-release-scl`
-`yum install rh-python36`
-`scl enable rh-python36 bash`
-
-
+Check --> https://wiki.samba.org/index.php/Package_Dependencies_Required_to_Build_Samba
 
 ```
 yum install gpgme-devel jansson-devel lmdb-devel gcc avahi-devel cups-devel dbus-devel docbook-style-xsl e2fsprogs-devel gawk gnupg2 gpgme-devel jansson-devel krb5-devel libacl-devel libaio-devel libarchive-devel libattr-devel libcap-devel libcmocka-devel libtirpc-devel libuuid-devel libxslt ncurses-devel openldap-devel pam-devel perl-generators perl popt-devel quota-devel readline-devel sed xfsprogs-devel xz zlib-devel pkgconfig libblkid-devel gnutls-devel python-devel gdb krb5-workstation setroubleshoot-server setroubleshoot-plugins policycoreutils-python libsemanage-python setools-libs libpcap-devel sqlite-devel libidn-devel libsepol-devel libxml2-devel keyutils-libs-devel cyrus-sasl-devel bind-utils bzip2 vim wget -y

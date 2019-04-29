@@ -51,7 +51,8 @@ rpm --import jcameron-key.asc
 - Restart your CentOS 7 system `shutdown -r now`
 
 ## Part 4 (Install Bind DNS)
-
+As root run the command `yum install bind bind-utils -y`
+Restart the service `service named restart`
 
 ## Part 5 (Install All the required packages)
 

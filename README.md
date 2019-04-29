@@ -4,6 +4,9 @@ All the packages needed to compile samba4
 ## PART 1 (Updates)
 - Update your system to the latest version. With root user use the command `yum update`.
 - Install the EPEL Release Repo. With root user use the command `yum install epel-release -y`.
+- Install the Centos Software Collections repo. With root user use the command `yum install centos-release-scl`.
+- Samba needs pyhton 3. Install Python 3.6 with root use use the command `yum install rh-python36`.
+- Enable python 3.6. With root user use the command `scl enable rh-python36 bash`.
 
 ## Part 2 (Disable Selinux & Firewalld)
 Check Selinux with `sestatus`

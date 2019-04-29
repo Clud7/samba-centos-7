@@ -62,7 +62,9 @@ rpm --import jcameron-key.asc
 ```
 
 Also python3.6 -->
-`sudo yum install centos-release-scl` and `yum install rh-python36` and `scl enable rh-python36 bash`
+`sudo yum install centos-release-scl`
+`yum install rh-python36`
+`scl enable rh-python36 bash`
 
 
 

@@ -80,7 +80,10 @@ yum install gpgme-devel jansson-devel lmdb-devel gcc avahi-devel cups-devel dbus
 ./configure --with-systemd
 ```
 
-
+After the successfule configuration run the make install command as root
+```
+make && make install
+```
 
 
 ```

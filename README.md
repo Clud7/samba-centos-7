@@ -78,7 +78,7 @@ yum install gpgme-devel jansson-devel lmdb-devel gcc avahi-devel cups-devel dbus
 - Configure Samba with 
 
 ```
-./configure --with-systemd
+./configure --prefix=/usr --localstatedir=/var --sysconfdir=/etc --enable-fhs
 ```
 
 After the successfule configuration run the make install command as root

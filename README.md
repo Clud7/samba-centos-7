@@ -78,7 +78,8 @@ yum install gpgme-devel jansson-devel lmdb-devel gcc avahi-devel cups-devel dbus
 - Configure Samba with 
 
 ```
-./configure --prefix=/usr --dns-backend=BIND9_DLZ
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-fhs
+./configure --prefix=/usr 
 ```
 
 After the successfule configuration run the make install command as root
@@ -92,9 +93,9 @@ yum install samba-libs
 ```
 
 
-Configue Samba:
+Samba Tools:
 ```
-/usr/local/samba/bin/samba-tool domain provision --realm=mydomain.lan --domain=mydomain --adminpass="your_password" --server-role=dc --dns-backend=SAMBA_INTERNAL
+/usr/local/samba/bin/samba-tool domain provision --realm=mydomain.lan --domain=mydomain --adminpass='your_password' --server-role=dc --dns-backend=BIND9_DLZ
 ```
 
 ```

@@ -85,6 +85,13 @@ After the successfule configuration run the make install command as root
 ```
 make && make install
 ```
+
+Install samba libs:
+```
+yum install samba-libs
+```
+
+
 Configue Samba:
 ```
 /usr/local/samba/bin/samba-tool domain provision --realm=mydomain.lan --domain=mydomain --adminpass="your_password" --server-role=dc --dns-backend=SAMBA_INTERNAL

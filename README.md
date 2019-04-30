@@ -78,7 +78,7 @@ yum install gpgme-devel jansson-devel lmdb-devel gcc avahi-devel cups-devel dbus
 - Configure Samba with 
 
 ```
-./configure --prefix=/usr --localstatedir=/var --sysconfdir=/etc --enable-fhs
+./configure --prefix=/usr --dns-backend=BIND9_DLZ
 ```
 
 After the successfule configuration run the make install command as root

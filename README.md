@@ -83,10 +83,9 @@ yum install gpgme-devel jansson-devel lmdb-devel gcc avahi-devel cups-devel dbus
 - Configure Samba with 
 
 ```
+scl enable rh-python36 bash
 ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-fhs
-./configure --prefix=/usr 
 ```
-If you have the error `/usr/bin/env: python3: No such file or directory` run the command  `scl enable rh-python36 bash`
 
 After the successfule configuration run the make install command as root
 ```

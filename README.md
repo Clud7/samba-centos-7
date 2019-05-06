@@ -79,7 +79,7 @@ yum install gpgme-devel jansson-devel lmdb-devel gcc avahi-devel cups-devel dbus
 ## Part 6 (Download and Build)
 - To download samba use the command `wget https://download.samba.org/pub/samba/stable/samba-4.10.2.tar.gz`
 - To unzip samba use the command `tar -zxvf samba-4.10.2.tar.gz`
-- Go to Samba folder `cd samba-4.10.2.tar.gz`
+- Go to Samba folder `cd samba-4.10.2`
 - Configure Samba with 
 
 ```

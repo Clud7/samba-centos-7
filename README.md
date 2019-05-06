@@ -54,6 +54,11 @@ rpm --import jcameron-key.asc
 As root run the command `yum install bind bind-utils -y`
 Restart the service `service named restart`
 
+*NOTE That: 
+--> Addresses and Topology: Set your Lan Address.
+--> Zone Defaults: Allow queries from your network. Like 192.168.0.0/24
+
+
 ## Part 5 (Install All the required packages)
 
 ```

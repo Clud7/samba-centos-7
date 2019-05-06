@@ -85,6 +85,13 @@ yum install gpgme-devel jansson-devel lmdb-devel gcc avahi-devel cups-devel dbus
 ```
 scl enable rh-python36 bash
 ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-fhs
+
+or
+
+PYTHON=python2 ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-fhs
+PYTHON=python2 make
+PYTHON=python2 make install
+
 ```
 
 After the successfule configuration run the make install command as root

@@ -92,6 +92,12 @@ PYTHON=python2 ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var 
 PYTHON=python2 make
 PYTHON=python2 make install
 
+or
+
+PYTHON=python2 ./configure --prefix=/usr --localstatedir=/var --with-configdir=/etc/samba --libdir=/usr/lib64 --with-modulesdir=/usr/lib64/samba --with-pammodulesdir=/lib64/security --with-lockdir=/var/lib/samba --with-logfilebase=/var/log/samba --with-piddir=/run/samba --with-privatedir=/etc/samba --enable-fhs
+PYTHON=python2 make
+PYTHON=python2 make install
+
 ```
 
 After the successfule configuration run the make install command as root

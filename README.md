@@ -8,7 +8,7 @@ All the packages needed to compile samba4
 - Samba needs pyhton 3. Install Python 3.6 with root use use the command `yum install rh-python36`.
 - Enable python 3.6. With root user use the command `scl enable rh-python36 bash`.
 
-## Part 2 (Disable Selinux & Firewalld)
+## Part 2 (Disable Selinux & Firewalld & Virtualization Service)
 Check Selinux with `sestatus`
 To permanently disable SELinux on your CentOS 7 system:
 - Open the `/etc/selinux/config` file and set the SELINUX mod to disabled.
@@ -28,6 +28,11 @@ To permanently disable SELinux on your CentOS 7 system:
 ```
     # systemctl stop firewalld
     # systemctl disable firewalld
+```
+- To permanently disable virtualization service
+```
+    # systemctl stop libvirtd.service
+    # ystemctl disable libvirtd.service
 ```
 
 ## Part 3 (install webmin)

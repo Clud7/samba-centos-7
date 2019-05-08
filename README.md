@@ -124,9 +124,13 @@ Samba Tools:
 ```
 ./configure --prefix=/usr --localstatedir=/var --with-configdir=/etc/samba --libdir=/usr/lib64 --with-modulesdir=/usr/lib64/samba --with-pammodulesdir=/lib64/security --with-lockdir=/var/lib/samba --with-logfilebase=/var/log/samba --with-piddir=/run/samba --with-privatedir=/etc/samba --enable-cups --with-acl-support --with-ads --with-automount --enable-fhs --with-pam --with-quotas --with-shared-modules=idmap_rid,idmap_ad,idmap_hash,idmap_adex --with-syslog --with-utmp --with-dnsupdate
 ```
+## Part 7 (Create symbolic link)
+```
+ln -s /usr/local/samba/sbin/samba /usr/sbin/samba
+ln -s /usr/local/samba/bin/samba-tool /usr/bin/samba-tool
+```
 
-
-## Part 7 (Create Systemd File, Samba TMP conf and rename krb5.conf)
+## Part 8 (Create Systemd File, Samba TMP conf and rename krb5.conf)
 - Run the command `vi /usr/lib/systemd/system/samba.service` and add:
 ```
 [Unit]

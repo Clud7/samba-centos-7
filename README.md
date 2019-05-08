@@ -32,7 +32,7 @@ To permanently disable SELinux on your CentOS 7 system:
 - To permanently disable virtualization service
 ```
     # systemctl stop libvirtd.service
-    # ystemctl disable libvirtd.service
+    # systemctl disable libvirtd.service
 ```
 
 ## Part 3 (install webmin)

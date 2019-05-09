@@ -128,6 +128,8 @@ Samba Tools:
 ```
 ln -s /usr/local/samba/sbin/samba /usr/sbin/samba
 ln -s /usr/local/samba/bin/samba-tool /usr/bin/samba-tool
+ln -s /usr/local/samba/sbin/samba_dnsupdate /usr/sbin/samba_dnsupdate
+ln -s /usr/local/samba/sbin/samba_upgradedns /usr/sbin/samba_upgradedns
 ```
 ## PART 8 (Fix BIND DNS)
 During the domain provisioning, join, or classic upgrade, the /usr/local/samba/bind-dns/named.conf file has been created. 

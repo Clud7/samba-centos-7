@@ -139,6 +139,22 @@ vi /etc/named.conf
 include "/usr/local/samba/bind-dns/named.conf";
 ```
 
+update setings
+```
+samba_upgradedns --dns-backend=BIND9_DLZ
+samba_dnsupdate --verbose
+
+```
+Restart BIND DNS
+```
+systemctl restart named
+```
+
+Start SAMBA
+```
+systemctl start samba
+```
+
 ## Part 9 (Create Systemd File, Samba TMP conf and rename krb5.conf)
 - Run the command `vi /usr/lib/systemd/system/samba.service` and add:
 ```

@@ -129,8 +129,15 @@ Samba Tools:
 ln -s /usr/local/samba/sbin/samba /usr/sbin/samba
 ln -s /usr/local/samba/bin/samba-tool /usr/bin/samba-tool
 ```
+## PART 8 (Fix BIND DNS)
+During the domain provisioning, join, or classic upgrade, the /usr/local/samba/bind-dns/named.conf file has been created. 
+Edit the file named.conf and add the named.conf that samba created
+```
+vi /etc/named.conf
+include "/usr/local/samba/bind-dns/named.conf";
+```
 
-## Part 8 (Create Systemd File, Samba TMP conf and rename krb5.conf)
+## Part 9 (Create Systemd File, Samba TMP conf and rename krb5.conf)
 - Run the command `vi /usr/lib/systemd/system/samba.service` and add:
 ```
 [Unit]
@@ -154,5 +161,5 @@ d /var/run/samba 0755 root root -
 ```
 - Run the command `mv /etc/krb5.conf /etc/krb5.conf.old`
 
-## Part 8 Setun Samba Domain Provision
+## Part 10 Setun Samba Domain Provision
 - Run the command `samba-tool domain provision`

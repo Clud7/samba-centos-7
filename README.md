@@ -183,5 +183,19 @@ d /var/run/samba 0755 root root -
 ```
 - Run the command `mv /etc/krb5.conf /etc/krb5.conf.old`
 
-## Part 10 Setun Samba Domain Provision
-- Run the command `samba-tool domain provision`
+## Part 10 Setun Samba Autostart
+- Run the command `vi /etc/systemd/system/samba.service` and add the following
+```
+[Unit]
+Description= Samba 4 Active Directory
+After=syslog.target
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=/usr/local/samba/var/run/samba.pid
+ExecStart=/usr/local/samba/sbin/samba
+
+[Install]
+WantedBy=multi-user.target
+```

@@ -103,6 +103,10 @@ PYTHON=python2 ./configure --prefix=/usr --localstatedir=/var --with-configdir=/
 PYTHON=python2 make
 PYTHON=python2 make install
 
+or
+
+PYTHON=python2 ./configure --enable-debug --enable-selftest --with-ads --with-systemd && PYTHON=python2 make && PYTHON=python2 make install
+
 ```
 
 After the successfule configuration run the make install command as root
